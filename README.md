@@ -1,53 +1,73 @@
 
 ---
 
-# M3U4U Customization Transfer Script
+# 🚀 M3U4U Customization Transfer Script
 
-## Overview
+## 🎯 Overview
 
-This script helps **restore lost customizations** after syncing your M3U4U playlist. When an IPTV provider updates all channel URLs, M3U4U removes any custom sorting, logos, hidden channels, and group settings. This script transfers all those settings from an **old backup** to a **new backup**, keeping the new URLs while restoring your previous customizations.
+When your IPTV provider updates channel URLs, your **logos, hidden channels, group settings, and sorting** are wiped out. 
 
-## How It Works
+✨ **This script fixes that!** ✨  
+It restores all your **personalized settings** by transferring them from an **old backup** to a **new backup**, keeping your updated URLs intact while bringing back your custom preferences.
 
-### 1. **Prerequisites:**
-- You must have **an old backup** (before syncing) that contains your preferred customizations.
-- You must create **a new backup** (after syncing) to capture the latest URLs, name changes, and structure updates.
+---
 
-### 2. **What This Script Does:**
-- It **uses the new backup as the base**, keeping its URLs, names, and structure.
-- It **transfers all customization settings** from the old backup to the corresponding channels in the new backup.
-- It **outputs a new JSON file** (`output.json`) that you can restore in M3U4U.
+## 🔧 How It Works
 
-### 3. **What Gets Transferred:**
-- Channel order
-- Custom logos
-- Custom names (if previously set)
-- Hidden channels
-- Group assignments
-- Any other customization settings inside the `"Customization"` field
+### ✅ **Step 1: Get Your Backups Ready**
+Before running the script, you’ll need:
+✔ **An old backup** (before syncing) – this contains your customizations.  
+✔ **A new backup** (after syncing) – this contains the latest URLs and channel structure.  
 
-## Usage
+### 🔄 **Step 2: What This Script Does**
+🔹 Uses the **new backup** as the foundation, keeping its updated URLs and structure.  
+🔹 Transfers **all your customizations** from the old backup to the corresponding channels in the new backup.  
+🔹 Outputs a final **merged JSON file** (`output.json`) that **restores your settings** when uploaded back into M3U4U.  
 
-1. **Run the script with:**
-   ```bash
-   python transfer_customization.py old.json new.json output.json
-   ```
-   - `old.json`: Your backup before the sync (containing desired customizations).
-   - `new.json`: Your latest backup after the sync (containing the updated URLs).
-   - `output.json`: The final merged JSON file.
+### 🎛 **Step 3: What Gets Restored**
+✅ Channel order  
+✅ Custom logos  
+✅ Custom names (if previously set)  
+✅ Hidden channels  
+✅ Group assignments  
+✅ Any other settings in the `"Customization"` field  
 
-2. **Replacing the JSON in the Backup ZIP:**
-   - After running the script, locate the zipped backup file from M3U4U.
-   - Open the `.zip` file and delete the existing `.json` file inside.
-   - Rename `output.json` to match the name of the deleted file exactly.
-   - Place the renamed file inside the `.zip` and save it.
+---
 
-3. **Restoring the Backup:**
-   - Upload (restore) the modified `.zip` file back to M3U4U to restore your customizations.
+## 🚀 Usage Guide
 
-## Notes
+### 💻 **Run the Script**
+Run the following command in your terminal or command prompt:
 
-- **Ensure exact name matching** between channels for proper customization transfer.
-- **Do not modify the new URLs**—the script keeps them unchanged.
-- **Non-ASCII characters (e.g., ñ, é) are preserved** in the output.
-- **Always back up your data** before running the script.
+```bash
+python transfer_customization.py old.json new.json output.json
+```
+- `old.json` → Your **pre-sync backup** (with your customizations).  
+- `new.json` → Your **post-sync backup** (with updated URLs & structure).  
+- `output.json` → Your **final JSON file**, ready to restore in M3U4U.  
+
+---
+
+## 📂 **Replacing the JSON in the Backup ZIP**
+After running the script, follow these steps to **apply the restored settings**:
+
+1️⃣ Locate your **M3U4U backup ZIP file**.  
+2️⃣ Open the `.zip` file and **delete** the existing `.json` file inside.  
+3️⃣ Rename `output.json` **to match the name of the deleted file exactly**.  
+4️⃣ Place the **renamed file** back into the `.zip` and save it.  
+
+---
+
+## 📤 **Restoring Your Backup**
+Finally, upload the modified `.zip` file back into **M3U4U** to fully restore your **logos, hidden channels, and group settings** 🎉.  
+
+---
+
+## 📝 Important Notes
+
+⚠ **Make sure channel names match exactly** for proper customization transfer.  
+⚠ **Do not modify the new URLs**—the script ensures they stay up to date.  
+⚠ **Special characters (e.g., ñ, é) are preserved** to avoid encoding issues.  
+⚠ **Always keep a backup** of your data before running the script.  
+
+---
