@@ -48,13 +48,14 @@ python transfer_customization.py old.json new.json output.json
 
 ---
 
-## 📂 **Replacing the JSON in the Backup ZIP**
+## 📂 **Replacing the JSON in the Backup ZIP**  
 After running the script, follow these steps to **apply the restored settings**:
 
-1️⃣ Locate your **M3U4U backup ZIP file**.  
-2️⃣ Open the `.zip` file and **delete** the existing `.json` file inside.  
-3️⃣ Rename `output.json` **to match the name of the deleted file exactly**.  
-4️⃣ Place the **renamed file** back into the `.zip` and save it.  
+1. **Locate** your most recent **M3U4U backup ZIP file**.  
+2. **Open** the `.zip` file and **delete** the existing `.json` file inside.  
+3. **Rename** `output.json` **to match the name of the deleted file exactly**:  
+   - Ensure that the `DateCreated` and `PlaylistCode` (both located at the top) match the original file.  
+4. **Place** the renamed file back into the `.zip` and save it.  
 
 ---
 
