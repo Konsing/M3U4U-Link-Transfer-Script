@@ -1,3 +1,4 @@
+Below is your updated README file with revised instructions for replacing the JSON in the backup ZIP:
 
 ---
 
@@ -22,7 +23,7 @@ Before running the script, you’ll need:
 ### 🔄 **Step 2: What This Script Does**
 🔹 Uses the **new backup** as the foundation, keeping its updated URLs and structure.  
 🔹 Transfers **all your customizations** from the old backup to the corresponding channels in the new backup.  
-🔹 Outputs a final **merged JSON file** (`output.json`) that **restores your settings** when uploaded back into M3U4U.  
+🔹 Outputs a final **merged JSON file** (output.json) that **restores your settings** when uploaded back into M3U4U.  
 
 ### 🎛 **Step 3: What Gets Restored**
 ✅ Channel order  
@@ -30,7 +31,7 @@ Before running the script, you’ll need:
 ✅ Custom names (if previously set)  
 ✅ Hidden channels  
 ✅ Group assignments  
-✅ Any other settings in the `"Customization"` field  
+✅ Any other settings in the "Customization" field  
 
 ---
 
@@ -42,9 +43,10 @@ Run the following command in your terminal or command prompt:
 ```bash
 python transfer_customization.py old.json new.json output.json
 ```
-- `old.json` → Your **pre-sync backup** (with your customizations).  
-- `new.json` → Your **post-sync backup** (with updated URLs & structure).  
-- `output.json` → Your **final JSON file**, ready to restore in M3U4U.  
+
+- **old.json** → Your **pre-sync backup** (with your customizations).  
+- **new.json** → Your **post-sync backup** (with updated URLs & structure).  
+- **output.json** → Your **final JSON file**, ready to restore in M3U4U.  
 
 ---
 
@@ -52,15 +54,15 @@ python transfer_customization.py old.json new.json output.json
 After running the script, follow these steps to **apply the restored settings**:
 
 1. **Locate** your most recent **M3U4U backup ZIP file**.  
-2. **Open** the `.zip` file and **delete** the existing `.json` file inside.  
-3. **Rename** `output.json` **to match the name of the deleted file exactly**:  
-   - Ensure that the `DateCreated` and `PlaylistCode` (both located at the top) match the original file.  
-4. **Place** the renamed file back into the `.zip` and save it.  
+2. **Open** the .zip file, **copy the name** of the JSON file inside, and then **delete** that JSON file.  
+3. **Rename** output.json to the name you copied from the deleted file.  
+   - Ensure that the DateCreated and PlaylistCode (both located at the top) match the original file.  
+4. **Place** the renamed file back into the .zip and save it.  
 
 ---
 
 ## 📤 **Restoring Your Backup**
-Finally, upload the modified `.zip` file back into **M3U4U** to fully restore your **logos, hidden channels, and group settings** 🎉.  
+Finally, upload the modified .zip file back into **M3U4U** to fully restore your **logos, hidden channels, and group settings** 🎉.  
 
 ---
 
